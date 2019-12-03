@@ -5,7 +5,7 @@ class OpenGCSExtTest < Test::Unit::TestCase
   using OpenGCSExt
 
   def test_success
-    mock(OpenGCS).open_gcs("gs://test_bucket/foo", {}) { true }
+    mock(OpenGCS).open_gcs.with_any_args { |path, *_| path == "gs://test_bucket/foo" }
     assert File.open("gs://test_bucket/foo")
   end
 
