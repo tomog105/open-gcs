@@ -25,10 +25,10 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.5'
 
-  spec.add_dependency "google-cloud-storage", ">= 1.9.0"
+  spec.add_dependency "google-cloud-storage", "~> 1.9"
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
-  spec.add_development_dependency "test-unit", ">= 3.2.7"
+  spec.add_development_dependency "test-unit", '~> 3.2', ">= 3.2.7"
   spec.add_development_dependency "test-unit-rr"
 end
