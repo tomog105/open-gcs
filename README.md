@@ -28,13 +28,13 @@ OpenGCS.open_gcs('gs://your-bucket/your-file') { |file|
 }
 ```
 
-### Wrapping to `File::Open`
+### Wrapping to `File.open`
 
 ```ruby
 class YourClass
   using OpenGCSExt
 
-  File::Open('gs://your-bucket/your-file') { |file|
+  File.open('gs://your-bucket/your-file') { |file|
     file.each_line { |line| puts line }
   }
 end
